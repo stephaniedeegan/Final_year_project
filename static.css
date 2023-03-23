@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, pink,rgba(255, 0, 0, 0.858)) ;
+    width: 100vw;
+    min-height: 100vh;
+  }
+      .header {
+      padding: 30px; /* some padding */
+      text-align: center; /* center the text */
+      /*background: #f5c1c1; */
+      color: white; 
+    }
+  
+    .header h1 {
+    font-size: 40px;
+    text-shadow: 0px 0px 5px #f0a7c2, 0px 0px 10px #f0a7c2, 0px 0px 10px #f0a7c2,
+    0px 0px 20px #f0a7c2;
+  }
+
+  .text{
+    font-size: 16px;
+    color:black;
+    text-align: center;
+  }
+      

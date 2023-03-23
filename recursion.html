@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <div class="header" >
+      <h1>Recursion</h1>
+    </div>
+    <div style="width: 100%;">
+    <div class="ltext" style="width: 50%; height: 600px; float: left;">
+        <p>Recursion is the process in which a function calls itself directly or indirectly.
+           It can reduce the length of one's code, making it easier to read and write.<br>
+            <br>All recursive methods must have a base case.
+            A recursive method keeps calling itself until it reaches the base case and then it filters back up.<br>
+            <br><b>Direct recursion :</b> functions call themselves<br>
+            <b>Indirect recursion :</b> functions call other functions to call the original function <br>
+            <br>
+            A recursive method should not call itself more than once.<br>
+           When you run a program, the computer creates a stack for you. <br>
+           Each time a method is called, you push the method on the stack.<br>
+           Each time the method returns or exits, you pop the method off the stack. <br>
+           If a method calls itself recursively, 
+           you just push another copy of the method onto the stack. 
+           This is a way to visualise how recursion works.<br>
+           <br>
+           <b>Simple Factorial Example</b><br>
+           Factorial(n) = n * Factorial (n-1) (for n>1)  <i>// recursive step</i><br>
+           Factorial(1) = 1<i>// base case or anchor</i><br>
+           Factorial(0) = 1  <br>
+           <br>
+           <b>Sigma Example</b><br>
+           public static int mySigma(int x)&nbsp;{<br>
+
+            &nbsp;if (x <= 0)&nbsp;{&nbsp; <i>// base case</i> <br>
+                &nbsp;&nbsp;&nbsp;return 0;}<br>
+                &nbsp;else&nbsp;{&nbsp;         <i>// recursive step</i><br>
+                    &nbsp;&nbsp;&nbsp;return (x + mySigma(x-1));}<br>
+         }<br>
+         <br>
+         <b>Advantages of Recursion</b>
+        <ul>
+            <li>Leads to simpler, shorter, and more elegant code, making it easier to understand</li>
+            <li>It is useful for solving complex problems</li>
+        </ul>
+
+        </p>
+    </div>
+
+    <div class="rtext" style="width:40%; height: 675px; float: left;">
+       <p>
+        <b>Triangular Numbers Example</b><br>
+        <b><i>Iterative Way</i></b><br>
+        public static int triangleI (int n)<br>
+        &nbsp;{ &nbsp; int sum = 0;<br>
+            &nbsp;&nbsp; for(int i=1; i<=n; i++)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum = i + sum;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; return sum;<br>
+            &nbsp;&nbsp;}<br>
+        <b><i>Recursive Way</i></b><br>
+        public static int triangleR (int n)<br>
+        &nbsp;{ &nbsp; <br>
+            &nbsp;&nbsp;if (n == 1) <i>&nbsp;//Base Case</i><br>
+            &nbsp;&nbsp;{<br>
+            &nbsp;&nbsp; return 1;<br>
+            &nbsp;&nbsp;}<br>
+        &nbsp; else<br>
+        &nbsp;&nbsp;{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; return (triangleR (n-1) + n);<br>
+        &nbsp;&nbsp;} <br>
+        &nbsp;}<br>
+        <br>
+        <b>Recursion vs Iteration</b><br>
+        <i>Recursion</i>
+        <ul>
+            <li>Shorter code</li>
+            <li>Terminates when base case becomes true</li>
+            <li>Used with functions</li>
+        </ul>
+        <i>Iteration</i>
+        <ul>
+            <li>Longer code</li>
+            <li>Terminates when the condition becomes false</li>
+            <li>Used with loops</li>
+        </ul>
+        
+       </p>
+    </div>
+    <form>
+        <input type="button" value="<" onclick="history.back()">
+      </form>
+  
+</body>
+
+</html>

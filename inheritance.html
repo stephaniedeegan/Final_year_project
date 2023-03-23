@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <div class="header" >
+      <h1>Inheritance</h1>
+    </div>
+
+    <div class="ltext" style="width: 45%; height: 575px; float: left;">
+        <p>
+        <b>Inheritance : </b>
+        it is the process of creating a new class by absorbing data and methods from an existing class <br>
+        <br>
+        Java allows us to reuse class definitions and 
+        extend functionality by allowing one class (the child or subclass) to inherit 
+        from another class (the parent or superclass). <br>
+        <br>
+        <b>Superclass :</b>
+        is the class that is extended by another class<br>
+        <br>All attributes and methods of the superclass are available in each subclass when inheritance is used.<br>
+        In order to call the super class constructor we use the keyword <i>super().</i><br>
+        <br>
+        The keyword <i><b>extends</b>s</i> allows one class to inherit from another. <br>
+        This allows us to extend the design of the parent (super) class by enabling us to inherit all its attributes and functionality.<br>
+        &nbsp;&nbsp;&nbsp;&rarr; class SubClass extends SuperClass { ... } <br>
+        <br>
+        A subclass can inherit fields and methods from its superclass, as well as add new fields and methods of its own.<br>
+        A subclass can call a method in its superclass using the super keyword, followed by the method name and arguments. <br>
+        &nbsp;&nbsp;&nbsp;&rarr; super.methodName(argumentList) <br>
+
+
+        </p>
+        </div>
+        
+        <div class="rtext" style="width: 50%; height: 575px; float: left;">
+        <p>
+            <b>Example Code that implements inheritance : </b><br>
+            <br>
+            class Animal {  <i>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; // superclass </i><br>
+                &nbsp;&nbsp; private String name;<br>
+            
+                &nbsp;&nbsp;public Animal(String name) { <br>
+                    &nbsp;&nbsp;&nbsp; this.name = name; <br>
+                &nbsp;&nbsp;} <br>
+            
+                &nbsp;&nbsp;public String getName() { <br>
+                    &nbsp;&nbsp;&nbsp; return name;<br>
+                &nbsp;&nbsp;} <br>
+            
+                &nbsp;&nbsp; public void eat() { <br>
+                    &nbsp;&nbsp;&nbsp; System.out.println(name + " is eating"); <br>
+                &nbsp;&nbsp;} <br>
+            }<br>
+            
+            class Dog extends Animal {  <i> &nbsp;&nbsp;&nbsp;&nbsp;// subclass </i> <br>
+                &nbsp;&nbsp;public Dog(String name) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; super(name); <i> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// call superclass constructor </i> <br>
+                }<br>
+            
+                &nbsp;&nbsp; public void bark() { <br>
+                    &nbsp;&nbsp;&nbsp; System.out.println(getName() + " is barking"); <br>
+                &nbsp;&nbsp;} <br>
+            }<br>
+            <br>
+            public class Main { <i> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;// main program </i> <br>
+                &nbsp;public static void main(String[] args) { <br>
+                    <i> // create a Dog object </i> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; Dog dog = new Dog("Roxy");<br>
+            
+                    &nbsp;&nbsp;&nbsp;&nbsp; dog.eat(); <br>
+        
+                    &nbsp;&nbsp;&nbsp;&nbsp; dog.bark(); <br>
+                    &nbsp; }<br>
+            }<br>
+            
+        </p>
+        </div>
+
+        <form>
+            <input type="button" value="<" onclick="history.back()">
+          </form>
+      
+</body>

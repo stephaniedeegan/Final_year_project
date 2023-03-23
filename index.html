@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bare Minimum</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+    <div class="header">
+      <p>Welcome to the</p>
+      <h1>Bare Minimum</h1>
+      <h2>Resources to aid your study of CS162</h2> 
+      <a class="button1" href="notes.html" style="text-decoration:none">Notes</a>
+      <a class="button2" href="quiz.html" style="text-decoration:none">Quiz</a>
+      <a class="infobtn" href="info.html"style="text-decoration:none">i</a>
+      <a id="logout" class="logOut" href="log.html"style="text-decoration:none">Log Out</a>
+    </div>
+      
+</body>
+
+</html>
+
+<script type="module">
+import { getAuth, signOut } from "firebase/auth";
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyA6-jixh5jA4ShgLLcseVC8hUBYLZhsBSw",
+authDomain: "finalyear-a189e.firebaseapp.com",
+databaseURL: "https://finalyear-a189e-default-rtdb.europe-west1.firebasedatabase.app",
+projectId: "finalyear-a189e",
+storageBucket: "finalyear-a189e.appspot.com",
+messagingSenderId: "130431633477",
+appId: "1:130431633477:web:956990b1d46e3ba0057b2c",
+measurementId: "G-RH4ZCQFZMP"
+  };
+
+const logoutBtn = document.querySelector('#logout');
+logout.addEventListener('click', e => {
+  e.preventDefault();
+  auth.signOut();
+  console.log('User signed out!');
+  // save log in details into real time database
+  var lgDate = new Date();
+              update(ref(database, 'users/' + user.uid), {
+                  last_logout: lgDate,
+              })
+})
+
+</script>

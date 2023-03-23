@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and Object Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <div class="header" >
+      <h1>Classes and Objects</h1>
+    </div>
+
+    <div class="ltext" style="width: 45%; height: 675px; float: left;">
+        <p>
+        <b>Class Scope : </b>
+        This is when a variable (attribute) is declared just inside the first line of a class
+        after the first brace {. The scope of this variable covers the whole class
+        which includes any methods inside the class. <br>
+        <br>
+        <b>Data Encapsulation : </b>
+        is the process of hiding implementation details, which is achieved by
+        bundling the methods and variables of a class reprsentaion in the class.<br>
+        <br>
+        <b>Private :</b>
+        This is an access modifier which is put in front of your class variables declarations.
+        Only methods defined inside a class definition can have access 
+        to or are able to change the value of the variable. <br>
+        <br>
+        <b>Public : </b>
+        This allows other code to call these methods using an instance of an object and the 
+        dot “.” operator followed by the method name. 
+        You allow the public to have a way of accessing your attributes. <br>
+        <br>
+        <b>Information Hiding : </b>
+        only allowing the methods defined within a class to have access to or change the values of the attributes of the class. 
+        Achieved by declaring the class attribute variables to using the access modifier private in front of their declarations.<br>
+        <br>
+        <b>Inheritance :</b>
+         is the process of creating a new class from an existing class.
+         It is a very important ability because it allows the programmer to develop and extend software 
+         which is dependent on previously proven super classes.<br>
+         <br>
+         <b>Overriding Methods : </b>
+         When a method is overridden in a subclass, and that method is invoked on an instance of the subclass, 
+         it is the overridden version of the method that is executed. The subclass method must have the same name and 
+         parameter types as the superclass method it overrides. <br>
+         <br>
+         <b>Method Overloading :</b>
+         Creating multiple versions of the same method with different parameters.
+
+        </p>
+        </div>
+        
+        <div class="rtext" style="width: 50%; height: 675px; float: left;">
+        <p>
+        <b>Writing Class constructor methods</b> <br>
+        <ul>
+            <li>The Class constructor method name is the same as the name of the Class itself</li>
+            <li>The constructor method never returns a value or type although it appears to do so</li>
+            <li>The constructor needs to be accessible from outside the class <br>
+                &nbsp;&nbsp;&nbsp;&rarr;  Needs to be <i>public</i>
+            </li>
+            <li>You can have multiple versions of the class constructor method <br>
+                &nbsp;&nbsp;&nbsp;&rarr;  Method overloading
+            </li>
+        </ul>
+        The key word <i>this</i> followed by the dot “.” operator allows you to specify 
+        which variable you are referring to explicitly. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i>this.x refers to the class instance variable x</i> <br>
+        <br>
+        <b>Example Code : </b> <br>
+        public class Point { <br>
+            &nbsp;&nbsp;private int x;<br>
+            &nbsp;&nbsp;private int y;<br>
+        
+            &nbsp;&nbsp;public Point(int x, int y) {<br>
+                &nbsp;&nbsp;&nbsp;    this.x = x;<br>
+                &nbsp;&nbsp;&nbsp;    this.y = y;<br>
+                &nbsp;&nbsp;}<br>
+        
+                &nbsp;&nbsp;public int getX() {<br>
+                    &nbsp;&nbsp;&nbsp;    return x;<br>
+                    &nbsp;&nbsp;}<br>
+        
+                    &nbsp;&nbsp;public void setX(int x) {<br>
+                        &nbsp;&nbsp;&nbsp;    this.x = x;<br>
+                        &nbsp;&nbsp;}<br>
+        
+                        &nbsp;&nbsp;public int getY() {<br>
+                            &nbsp;&nbsp;&nbsp;    return y;<br>
+                            &nbsp;&nbsp;}<br>
+        
+                            &nbsp;&nbsp;public void setY(int y) {<br>
+                                &nbsp;&nbsp;&nbsp;   this.y = y;<br>
+                                &nbsp;&nbsp;}<br>
+        
+                                &nbsp;&nbsp;public void printPoint() {<br>
+                                    &nbsp;&nbsp;&nbsp;   System.out.println("Point coordinates are (" + x + "," + y + ")");<br>
+                                    &nbsp;}<br>
+        }<br>
+        
+
+
+        </p>
+        </div>
+
+        <form>
+            <input type="button" value="<" onclick="history.back()">
+          </form>
+      
+</body>

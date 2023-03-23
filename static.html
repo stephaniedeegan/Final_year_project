@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="header">
+      <h1>Static Methods</h1>
+    </div>
+
+    <div class="ltext" style="width: 45%; height: 600px; float: left;">
+       <p>
+        A java method is a bundle of lines of code with a common function.
+        Methods also define the behaviour of Classes in object oriented programming.<br>
+        <br>
+        Writing methods allows us to maintain important code or algorithms that are used in repeatedly in different places in our applications.<br>
+        <br>
+        A method must be written or declared before it can be used.
+        After it is declared it is used by calling or invoking it in your program.<br>
+       <br>
+        <b>Method Declaration:</b><br>
+         Access_modifiers   return_type  method_name( formal_parameter_list)<br>
+         &nbsp;&nbsp;{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    statements; <br>
+        &nbsp;&nbsp; }<br>
+        <br>
+        <b>Example</b><br>
+            public static void printHello (  )<br>
+            &nbsp;&nbsp;{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;    System.out.println(“Hello world”);<br>
+            &nbsp;&nbsp;}<br>
+             <br>
+            <b>Formal Method Declaration:</b><br>
+
+            access_modifiers  return_type  method_name (formal parameter list)<br>
+            &nbsp;&nbsp;{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;statements;  // if the return type is not void then you need a return statement.<br>
+            &nbsp;&nbsp; }<br>
+            <br>
+            <b>Example</b><br>
+            public static int addTwoNumbers ( int x, int y )  <br>
+            &nbsp;&nbsp;{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return x + y;<br>
+            &nbsp;&nbsp;}<br>
+             <i>The <b>int</b> here declares that we want to return an int.</i><br>
+             
+            
+
+       </p>
+   
+    </div>
+
+    <div class="rtext" style="width: 45%; height: 675px; float: left;">
+        <p>The Scanner class is defined in the java.util package. To import it, include either 
+            <i>import java.util.*;</i> or <i>import java.util.Scanner;</i> at the top of your programme.
+            <br>
+            To create an instance of the Scanner class:<br>
+            <b> &rarr; Scanner sc = new Scanner(System.in)</b><br>
+            <br>
+            <i>nextInt() - int number = sc.nextInt( ); </i> // reads in the next token as an Integer<br>
+            <i>nextLine() - int sentence = sc.nextLine( );</i>// reads in the next token as an String<br>
+            <br>
+            <b>Rules for Declaring Methods</b>
+            <ul>
+                <li>The 1st line of tells the programmer how the method should be used.<br>
+                    &rarr; <i>Method Signature</i>
+                </li>
+                <li>The number of parameters in the call to the method must match the type and number of parameters  in the method declaration</li>
+                <li>If the return type is not void, then the method statements must contain
+                    the return statement
+                </li>
+                <li>Method name have to obey rules for legal identifiers.
+                    As a code convention rule, the 1st letter in the identifier is 
+                    a small letter, and the remaining words hvae their 1st letter captialised.
+                </li>
+            </ul>
+            <b>Scope &nbsp;: </b> is the portion of the program from which the 
+            variable can be addressed.<br>
+            There are 2 types of scope &nbsp;&rarr; <i>block</i> and <i>class</i><br>
+            <br>
+             A variable that is defined within a method is called a <i> local variable.</i><br>
+             The variable declared in a for statement only extends to the structure of that statement.<br>
+             You can't declare two variables with the same name in the same method as their scopes overlap.<br>
+            <br><b>Static Variables &nbsp;: </b> Methods and attributes which are Static have one “version” of them.<br>
+            <i>public</i> and <i>private</i> are called Access Modifiers.<br>
+            &nbsp;&rarr; private methods can NOT be seen by other classes <br>
+            <br>
+            You can define two or more methods within the same class that share the same name, as long as their parameter declarations are different. 
+            &nbsp;&rarr;These are called <b>overloaded methods</b>
+
+
+
+
+         </p>
+    </div>
+    
+    <form>
+        <input type="button" value="<" onclick="history.back()">
+      </form>
+  
+      
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="header">
+      <h1>Sorting and Searching</h1>
+    </div>
+
+    <div class="ltext" style="width: 45%; height: 600px; float: left;">
+       <p>
+        <b>Bubble Sort : </b>
+        An algorithm for arranging the elements in an array so that they are in numerical order (ascending or descending).<br>
+        BubbleSort is the simplies sorting algorithm. <br>
+        <ul>
+            <li>Compare the current element to the element on its right</li>
+            <li>If the current element on the left is the larger then we need to swap the values</li>
+            <li>Move on to the next element and repeat the swapping process</li>
+            <li>This process is repeated until the end of the array is reached – at this point the largest item is in the last position of the array</li>
+            <li>We must now return to the first position and repeat the above process starting at Step 1,
+                until all values are in the correct position
+            </li>
+        </ul>
+        <br>
+        public static void BubbleSort(int [] values)<br>
+        &nbsp;{<br>
+            &nbsp;&nbsp;int limit = values.length;<br>
+            &nbsp;&nbsp;int temp = 0;<br>
+            &nbsp;&nbsp; for (int i = 0; i < values.length; i++)<br>
+            &nbsp;&nbsp;{<br>
+                &nbsp;&nbsp;&nbsp;limit --; <br>
+                &nbsp;&nbsp;&nbsp;for (int j = 0; j< limit; j++) <br>
+                &nbsp;&nbsp;&nbsp;{ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(values[j] > values[j+1]) <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp = values[j+1];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values[j+1] = values[j];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values[j] = temp;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;} // end inner for loop<br>
+        &nbsp;&nbsp;} //end outer for loop<br>
+        &nbsp;}<br>
+        <br>
+        <b>Insertion Sort : </b>
+        Insertion sort is a simple sorting algorithm that works by iteratively building a sorted sublist by inserting each 
+        unsorted element into its correct position in the sorted sublist. <br>
+        <br>
+        <b>Quick Sort : </b>
+         works by dividing an array into smaller sub-arrays and then recursively sorting these sub-arrays.
+
+            
+
+       </p>
+   
+    </div>
+
+    <div class="rtext" style="width: 45%; height: 675px; float: left;">
+        <p>
+        <b>Linear search : </b>
+        a simple searching algorithm used to find an element in a list or an array. 
+        It works by sequentially checking each element of the list until a match is found or the end of the list is reached.<br>
+        <br>
+        <b>Binary search : </b>
+         is a search algorithm designed to find a value in a sorted array. <br>
+         It works by repeatedly dividing in half the portion of the list that could contain the item, until you've 
+         narrowed down the possible locations to just one.<br>
+         It’s always 2 to the power of something as we halve it (divide it in two).<br>
+         If the array is SORTED, and is between 1 and 100, it should be possible to find it in 7 goes or less.<br>
+         Because 2^7 = 128 and is above our upper boundary of 100.<br>
+       <br>
+       public static int binarySearch(int[] arr, int target) { <br>
+       &nbsp;&nbsp;int left = 0; <br>
+       &nbsp;&nbsp;int right = arr.length - 1; <br>
+    
+       &nbsp;&nbsp;while (left <= right) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;int mid = (left + right) / 2;<br>
+    
+        &nbsp;&nbsp;&nbsp;if (arr[mid] == target) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; return mid; }<br>
+            &nbsp;&nbsp; else if (arr[mid] < target) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left = mid + 1; }<br>
+                &nbsp;&nbsp; else { <br>
+                    &nbsp; &nbsp;&nbsp;&nbsp;   right = mid - 1; }<br>
+                &nbsp;}<br>
+    
+                &nbsp; return -1; <i>// Target not found</i><br>
+    }<br>
+        
+        <br><b>Time complexity</b><br>
+        <ul>
+            <li>Bubble Sort requires O(n^2) to sort</li>
+            <li>Insertion sort requires O(n^2)</li>
+            <li>Quick sort requires O(n log n)</li>
+            <li>Binary Search requires O(Log N) </li>
+            <li>Linear Search requires O(n)</li>
+        </ul>
+
+
+         </p>
+    </div>
+    
+    <form>
+        <input type="button" value="<" onclick="history.back()">
+      </form>
+  
+      
+</body>
+
+</html>

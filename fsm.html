@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSM Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <div class="header" >
+      <h1>Finite State Machines</h1>
+    </div>
+
+    <div class="ltext" style="width: 45%; height: 500px; float: left;">
+        <p>A FSM is a mathematical model of computation that describes a system's behavior as a 
+            set of states and transitions. <br> 
+            A FSM describes the behaviour of a Regular Expression (RegEx). 
+            Each FSM is composed of the following 5-tuple <b>(Q, Σ, δ, q0, F)</b>:<br>
+            <ul>
+            <li> a finite set of states</li>
+            <li>Σ: a finite alphabet set </li>
+            <li>δ: transition function - a set of maps from states and inputs into states </li>
+            <li>q0: an initial state </li>
+            <li>F: a set of final/accepting states<br>with line breaks.</li>
+            </ul>
+        </p>
+        <p>There are 2 special states: Start and Finish <br>
+            <br>
+            <b>Start State </b> : The FSM always begins in this state. It is 
+            usually represented with an arrow pointing at it. <br>
+            <br>
+            <b>Finish State</b> : The FSM must finish in this state. There can be multiple.
+            Finish states are those where the machine accepts the input.Accepting states are 
+            usually represented by double circles. <br>
+            <br>
+            A transition is a connection between two states that describes the machine's behavior. <br>
+            <br>
+            All accepted strings for FSM’s should be ordered lexicographically. <br>
+        </p>
+        </div>
+        
+        <div class="rtext" style="width: 50%; height: 500px; float: left;">
+        <p><b>Determinstic Finite State Automata (DFA) </b> <br>
+            A deterministic finite automata (DFA) is a type of FSM that 
+            has only one transition for each label in a state. <br>
+            They are machines in which each transition is uniquely determined by the current state and input <br>
+            <br>
+            <b>Non-deterministic finite automata (NFA) </b> <br>
+            A NFA allows for multiple transitions with the same label for many states. <br>
+            A NFA has more than one entry in at least one cell of the State Transition Table. <br>
+            <ul>
+                <li>Both NFA and DFA only recognise regular languages</li>
+                <li>DFA and NFA have distinct definitions, but it can be shown that they are equivalent. 
+                    That is, for any NFA we can construct an equivalent DFA and vice versa</li>
+            </ul>
+        </p>
+        </div>
+
+        <form>
+            <input type="button" value="<" onclick="history.back()">
+          </form>
+      
+</body>

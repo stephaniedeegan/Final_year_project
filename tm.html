@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <div class="header" >
+      <h1>Turing Machines</h1>
+    </div>
+
+    <div class="ltext" style="width: 45%; height: 500px; float: left;">
+        <p>A Turing Machine is a mathematical model of computation that defines an abstract machine. 
+            It consists of a read/write head with a paper tape passing through it<br>
+            The Turing Machine was invented by Alan Turing.<br>
+            <br>
+            The tape is of unbounded length and divided into squares.<br>It serves both as the means of input and output 
+            and also as a working memory for storing the results of intermediate steps of the computation.<br>
+            There must be a finite number of symbols used in the alphabet that the Turing machine can recognise.<br>
+            <br>
+            There are 6  fundamental operations that a Turing machine performs :  
+            <ul>
+                <li>Read the symbol that the head is currently over</li>
+                <li>Write a symbol on the square the head is currently over</li>
+                <li>Move the tape left one position </li>
+                <li>Move the tape right one position </li>
+                <li>Change state</li>
+                <li>Halt</li>
+            </ul>
+            An instruction table for a Turing machine is a finite collection of instructions.<br>
+            <br>
+            Each instruction is of the form : <br>
+            <br>
+            If the current state is n and the symbol under the head is x, then write y on the square under the 
+            head, go to state m, and move one square left or right. <br>
+
+        </p>
+        
+    </div>
+        
+        <div class="rtext" style="width: 50%; height: 500px; float: left;">
+    
+            <p>
+                There are three special states : 
+            <ul>
+                <li>Start state</li>
+                <li>Accept state</li>
+                <li>Reject state</li>
+            </ul>
+                The Turing Machine computes until it produces an output. <br>
+            If it never enters an accepting or rejecting state the Turing Machine goes on forever. <br>
+            The purpose of designated halt states is to indicate when the machine has finished computing.<br>
+            <br>
+                Definition of TM  is T = (Q,Σ,┌,q0,δ).<br>
+                <ul>
+                   <li>Q is the finite set of states</li>
+                   <li>Σ represents the input alphabet</li>
+                   <li>┌ is the tape alphabet</li>
+                   <li>q0 is the starting state</li>
+                   <li>δ is the transition function </li>
+                </ul>
+                The <i>Church-Turing Thesis</i> states that the capabilities of Turing machines are equivalent to those of any other computational device.
+            </p>
+
+        </div>
+
+        <form>
+            <input type="button" value="<" onclick="history.back()">
+          </form>
+      
+</body>

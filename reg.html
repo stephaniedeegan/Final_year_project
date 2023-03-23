@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <div class="header" >
+      <h1>Regular Expressions</h1>
+    </div>
+
+    <div class="ltext" style="width: 45%; height: 600px; float: left;">
+        <p>
+        Regular Expressions are routinely used for validating input and retrieving information. 
+        They are a concise means of matching strings.<br>
+        The String class using <b>matches()</b> method : <br>
+        <ul>
+            <li>The general format for the matches method is “Problem-string”.matches(“RegEx”)</li>
+            <li>“abc”.matches(“abc”) <i>  - returns true</i></li>
+            <li>“Abc”.matches(“abc”) <i>  - returns false</i></li>
+            <li>“aabbaba”.matches(“a[ab]*”)<i>  - returns true</i></li>
+        </ul>
+        </p>
+        <p>
+            <b>RegEx Grammar</b> <br>
+            <ul>
+                <li>[ ]  -  represents alternatives/or<br>
+                    <i>(e.g. ba[trn] - bat,bar,ban accepted, but bad not valid)</i></li><br>
+                <li>^   -  represents NOT / used to match the beginning of a line <br>
+                    <i>(e.g. ca[^trn] - cat,car,can not accepted, but cab is valid)</i></li><br>
+                <li>Ranges [a-z] <br>
+                    <i>(e.g. [A-Z] - any captial letter from A-Z)</i></li>
+                    <i>(e.g. [0-9]&&[^2]] 0-9 but Not 2)</i></li><br>
+                    <br>
+                <li>*  -  zero or more times <br>
+                    <i>(e.g. xy*  - x,xy,xyy,xyy...)</i></li>
+                    <i>(e.g. [as]*  - aa,,aassa,assa...)</i></li><br>
+                    <br>
+                <li>+   -  one or more times <br>
+                    <i>(e.g. ab*  - ab,abbb,abbbb...)</i></li>
+                    <i>(e.g. [0-9]+  -  any sequence of >= 1 digits)</i></li><br>
+                    <br>
+                <li>? -  zero or once (optional) <br>
+                    <i>(e.g. Colou?r  -  Colour Color)</i></li><br>
+        </p>
+        
+        </div>
+        
+        <div class="rtext" style="width: 50%; height: 500px; float: left;">
+        <p>
+                <li>Counted items { } <br>
+                    <i>(e.g. s{3}  -  sss only)</i></li>
+                    <i>(e.g. s{2,}  -  2 or more ss,sss...)</i></li><br>
+                    <i>(e.g. [a-z]{2,3}  -  any 2/3 letters, be,bed)</i></li><br>
+                    <br>
+                <li><b>.</b>  -  the wild character allowing for any character in a string, except the new line character<br>
+                    <i>(e.g. b.d  -  bed,bad,bud...)</i></li><br>
+                <li>/  -  We use backslash so that the following character is included. 
+                    It is a special character as it means, do NOT treat the following character in the 
+                    normal way<br>
+                    <i>(e.g. //  -  matches the quote / mark)</i></li>
+                    <i>(e.g. /"  -  matches the quote “ mark)</i></li><br>
+                    <i>(e.g. /s  -  white space)</i></li><br>
+                    <i>(e.g. /b  - matches the empty string at the beginning or end of a word</i></li><br>
+            </ul><br>
+            <b>Examples</b>
+            <ol>
+                <li><b>Write a RegEx that matches any string that contains only letters (uppercase or lowercase)</b><br>
+                    ^[a-zA-Z]+
+                </li><br>
+                <li><b>Write a RegEx that matches any string that contains a valid email address (only letters/digits accepted)</b><br>
+                    ^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}
+                </li><br>
+                <li><b>Write a RegEx that matches the words car,cap,bar,bap</b><br>
+                    ^[bc]a[rp]
+                </li>
+            </ol>
+        </p>
+        </div>
+
+        <form>
+            <input type="button" value="<" onclick="history.back()">
+          </form>
+      
+</body>
